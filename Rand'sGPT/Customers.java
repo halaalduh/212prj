@@ -159,25 +159,22 @@ public class Customers {
     }
 
     @Override
-    public String toString() {
-        String str = "Customer{" +
-                "id=" + customerId +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'';
-        if (!orders.empty()) {
-            str += ", orders=(";
-            orders.findFirst();
-            while (!orders.last()) {
-                str += orders.retrieve() + " ";
-                orders.findNext();
-            }
-            str += orders.retrieve() + ")";
+public String toString() {
+    String str = "Customer{" 
+            + "id=" + customerId 
+            + ", name=" + name 
+            + ", email=" + email;
+
+    if (!orders.empty()) {
+        str += " (orders: ";
+        orders.findFirst();
+        while (!orders.last()) {
+            str += orders.retrieve() + " ";
+            orders.findNext();
         }
-        str += "}";
-        return str;
+        str += orders.retrieve() + ")";
     }
+    str += " }";
+    return str;
 }
-
-
-
-     
+}
