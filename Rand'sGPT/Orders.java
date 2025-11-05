@@ -7,7 +7,7 @@ public class Orders {
 
     int orderId;
     int customerReference;
-    DoubleLinkedList<Integer> products = new DoubleLinkedList<Integer>();  
+    LinkedList<Integer> products = new LinkedList<Integer>();  
     double total_price;
     LocalDate date;
     String status; // (pending, shipped, delivered, cancelled)
@@ -43,7 +43,7 @@ public class Orders {
         return customerReference;
     }
 
-    public DoubleLinkedList<Integer> getProducts() {
+    public LinkedList<Integer> getProducts() {
         return products;
     }
 
@@ -126,6 +126,7 @@ public class Orders {
         return str;
     }
 }
+
 
 
 
