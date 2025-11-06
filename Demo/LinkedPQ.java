@@ -1,8 +1,4 @@
-/**
- *
- * @author Manal Alhihi
- * @param <T>
- */
+
 
 public class LinkedPQ<T> {
  
@@ -88,4 +84,5 @@ public class LinkedPQ<T> {
             size--;
             return pqe;
     }
+
 }
